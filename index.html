@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto+Condensed:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scrypt.js"></script>
+    <title>Winter todo app</title>
+  </head>
+  <body>
+    <header class="head">
+      <h1>This is your winter todo-app please make some todo</h1>
+      <img src="./assets/apple-touch-icon-120x120.png" alt="todo-icon"><br>
+    </header>
+    
+    <main>
+      <div class="todo">
+        <ul class="list-todo">
+          <li>Get up</li>
+          <li>Cleen teeth</li>
+          <li>Go to code</li>
+          <li>Sleep</li>
+        </ul>
+      </div>
+      <div class="new_todo">
+        <div class="our_add_task">
+          <label>Add your task</label>
+          <input type="text" class="input_task" id="new-task" onclick="addTodo()" />
+          <button class="btn-done">Add todo</button>                                                                                                                                           
+          <button class="btn-done" id="btn-delete">Delete todo</button>                                                                                                                                            
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

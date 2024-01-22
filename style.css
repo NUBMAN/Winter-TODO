@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(./assets/josh-hild-_TuI8tZHlk4-unsplash.jpg);
+    background-size: cover;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.todo{
+    background-color: rgb(93 209 209);
+    padding: 50px;
+    border-radius: 15px;
+    border: 2px solid white;
+    margin: 0px 300px 0px 300px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    padding: 10px 50px 10px 6px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    background-color: rgb(63 173 173);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    border: 2px solid white;
+}
+
+.new-todo-item {
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;  
+}
+
+.new_todo{
+    display: flex;
+    justify-content: center;
+    margin: 0px 300px 40px 300px;
+    font-family: 'Poppins', sans-serif;
+    color: bisque;
+}
+
+.our_add_task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(63 173 173);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    row-gap: 20px;
+}
+
+.input_task[type=text]{
+    padding: 5px 40px 10px 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    background-color: rgb(61, 203, 203);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    border: 3px solid white; 
+    outline: none;   
+}
+
+.input_task[type=text]:focus-visible {
+    padding: 5px 40px 10px 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    background-color: rgb(61, 203, 203);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    border: 3px solid rgb(26, 162, 156);
+    outline: none;
+}
+
+.btn-done{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 10px; /* Corrected value */
+    border-color: aqua;
+    background-color: rgb(24, 129, 129);
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+}
+
+list-todo{
+    position: sticky;
+}
