@@ -14,27 +14,39 @@
     <script src="./scrypt.js"></script>
     <title>Winter todo app</title>
   </head>
-  <body>
+  <body id="body">
     <header class="head">
-      <h1>This is your winter todo-app please make some todo</h1>
-      <img src="./assets/apple-touch-icon-120x120.png" alt="todo-icon"><br>
+      <h1>This is your winter todo-app, please make some todo</h1>
     </header>
-    
     <main>
-      <div class="todo">
-        <ul class="list-todo">
-          <li>Get up</li>
-          <li>Cleen teeth</li>
-          <li>Go to code</li>
-          <li>Sleep</li>
+      <div id="container">
+        <ul class="list">
+          <li class="list-item">
+            <label class="custom-radio-btn">
+              <input type="checkbox" />
+            </label>
+            <span>Gotta sleep</span>
+            <button class="delete-btn"><img src="/assets/clear-svgrepo-com.svg" alt="chross" width="15px"></button>
+          </li>
+          <li class="list-item">
+            <label class="custom-radio-btn">
+              <input type="checkbox" />
+            </label>
+            <span>Get up</span>
+            <button class="delete-btn"><img src="/assets/clear-svgrepo-com.svg" alt="chross" width="15px"></button>
+          </li>
+          <li class="list-item">
+            <label class="custom-radio-btn">
+              <input type="checkbox" />
+            </label>
+            <span>Take a bath</span>
+            <button class="delete-btn"><img src="/assets/clear-svgrepo-com.svg" alt="chross" width="15px"></button>
+          </li>
         </ul>
-      </div>
-      <div class="new_todo">
-        <div class="our_add_task">
-          <label>Add your task</label>
-          <input type="text" class="input_task" id="new-task" onclick="addTodo()" />
-          <button class="btn-done">Add todo</button>                                                                                                                                           
-          <button class="btn-done" id="btn-delete">Delete todo</button>                                                                                                                                            
+        <div id="create-btn">
+          <label><h1>Type your task here!</h1></label>
+          <input type="text">
+          <button>Create new task</button>
         </div>
       </div>
     </main>

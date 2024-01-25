@@ -1,32 +1,19 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const addTodo = () => {
-        document.querySelector('.btn-done').addEventListener("click", displayDate);
+document.addEventListener('DOMContentLoaded', () => {
+    //get elements that we need
+    delete_btn = document.getElementsByClassName('delete-btn'); 
     
-        function displayDate() {
-            let input_value = '';
-            let new_item = '';
-            input_value = document.getElementById('new-task').value;
-            if(input_value.trim() !== ''){
-                new_item = document.createElement('li');
-                new_item.textContent = input_value;
+
+    //function that deletes btn on click
+    Array.from(delete_btn).forEach((delete_btn) => {
+        delete_btn.addEventListener('click', (e) =>{
+            const todo_item = e.currentTarget.closest('.list-item')
+            if(todo_item){
+                todo_item.remove();
             }
-       
-            const TodoList = document.getElementsByClassName('list-todo')[0];
-            TodoList.appendChild(new_item)
-    
-            document.getElementById('new-task').value = ''
+        });
+    });
 
-            newListItem.classList.add('new-todo-item');
-    
-        }
+    //function that adds new list items
 
-    
-    }
 
-    const deleteTodo = () =>{
-        document.querySelector('#btn-delete').addEventListener("click", deleteDate)
-    }
-    document.querySelector('.btn-done').addEventListener("click", addTodo);
-    
 });
-
