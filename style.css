@@ -33,14 +33,6 @@ ul li{
     width: 50%;
 }
 
-.list_item{
-    display: flex;
-}
-
-.list_item input{
-    padding: 20px;
-}
-
 
 .delete-btn{
     margin-inline-end: 10px;
