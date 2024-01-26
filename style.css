@@ -94,6 +94,41 @@ ul li{
     color: white;
 }
 
+/* Add these styles for the custom checkbox */
+.custom-checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox:checked {
+    background-color: #55aaff;
+    border: 2px solid #ffffff;
+    color: white;
+  }
+  
+  .custom-checkbox:after {
+    content: '\2713'; /* Unicode character for checkmark */
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  
+  .custom-checkbox:checked:after {
+    display: block;
+  }
+  
 #container{
     display: flex;
     flex-direction: column;
@@ -101,3 +136,4 @@ ul li{
     padding-left: 30%;
     border-radius: 10px;
 }
+
