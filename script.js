@@ -1,19 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //get elements that we need
-    const delete_btns = document.getElementsByClassName('delete-btn'); 
-    add_btn = document.getElementById('add-btn');
-    todo_list = document.getElementById('list');
-    
-
     //function that deletes btn on click
-    Array.from(delete_btns).forEach((delete_btn) => {
-        delete_btn.addEventListener('click', (e) =>{
-            const todo_item = e.currentTarget.closest('.list-item')
-            if(todo_item){
+    const addDeleteButtonListener = (delete_btn) => {
+        delete_btn.addEventListener('click', () => {
+            const todo_item = delete_btn.closest('.list-item')
+            if (todo_item) {
                 todo_item.remove();
             }
         });
-    });
+    };
+
+     //get elements that we need drom DOM
+    const delete_btns = document.getElementsByClassName('delete-btn');
+    add_btn = document.getElementById('add-btn');
+    todo_list = document.getElementById('list');
+
+    // Set up delete button event listeners for existing buttons
+    Array.from(delete_btns).forEach(addDeleteButtonListener);
 
     //function that adds new list items
     add_btn.addEventListener('click', () => {
@@ -37,24 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         img_icon.style.width = '15px';
 
         delete_btn.className = 'delete-btn'
-        delete_btn.addEventListener('click', e=> {
-            const todo_item = delete_btn.closest('.list-item');
-            if(todo_item){
-                todo_item.remove()
-            }
-        })
+        addDeleteButtonListener(delete_btn);    
 
         delete_btn.appendChild(img_icon);
-
-
-
-
         list_todo_elem.appendChild(todo_checkbox);
         list_todo_elem.appendChild(span_item);
         list_todo_elem.appendChild(delete_btn);
         todo_list.appendChild(list_todo_elem);
-
-
+        
     });
 
 });
